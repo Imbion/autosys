@@ -4,8 +4,8 @@ module.exports = {
 	execute(message, args) {
 		// grab the "first" mentioned user from the message
 	    // this will return a `User` object, just like `message.author`
-	    const taggedUser = message.mentions.users.first();
+		var argsAsString = args.join(' ')
 
-	    message.channel.send(`${taggedUser.username} has been muted`);
+	    message.channel.send(`${argsAsString} has been muted`);
     }
 };
